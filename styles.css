@@ -1,0 +1,310 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5; /* Color de fondo */
+}
+
+header {
+    display: flex; /* Utiliza flexbox para alinear el contenido */
+    flex-direction: column; /* Coloca los elementos en columnas */
+    align-items: center; /* Centra horizontalmente el contenido */
+    padding: 20px; /* Espaciado interno del encabezado */
+    background-color: #333; /* Fondo oscuro para el encabezado */
+    color: #fff; /* Color blanco para el texto */
+    margin-bottom: 20px; /* Espacio entre el header y el carrusel */
+}
+
+h1 {
+    margin: 0; /* Elimina márgenes por defecto */
+}
+
+.slogan {
+    font-size: 1.2em; /* Tamaño de fuente del slogan */
+    color: gray; /* Color del slogan */
+    margin-top: 5px; /* Espacio superior para ajustar la separación */
+    text-align: center; /* Alinea el slogan al centro */
+}
+
+#logo {
+    height: 200px; /* Ajusta el tamaño del logo */
+    margin-right: 0px; /* Espacio entre el logo y el texto */
+    margin-bottom: 0px; /* Ajusta este valor según lo necesites */
+}
+
+
+/* Estilo general del menú */
+.navbar {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.menu-boxes {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.menu-boxes li {
+    display: inline-block;
+}
+
+.menu-boxes a {
+    display: block;
+    padding: 15px 30px;
+    background-color: rgba(250, 54, 156, 0.2); /* Fondo semi-transparente */
+    color: #000;
+    text-decoration: none;
+    font-size: 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.menu-boxes a:hover {
+    background-color: rgba(255, 255, 255, 0.5); /* Más opaco al pasar el mouse */
+}
+
+.menu-boxes a:active {
+    background-color: rgba(255, 255, 255, 0.8); /* Aumenta la opacidad al hacer clic */
+}
+
+
+
+
+
+.carrusel {
+    position: relative;
+    max-width: 800px; /* Ancho máximo del carrusel */
+    margin: auto; /* Centra el carrusel */
+    overflow: hidden; /* Oculta las imágenes que se desbordan */
+}
+
+.carrusel-inner {
+    display: flex; /* Utiliza flexbox para alinear los items */
+    transition: transform 0.5s ease; /* Transición suave al cambiar de slide */
+}
+
+.carrusel-item {
+    min-width: 100%; /* Cada item ocupa el 100% del ancho del carrusel */
+    display: none; /* Oculta todos los items por defecto */
+}
+
+.carrusel-item.active {
+    display: flex; /* Muestra el slide activo */
+}
+
+.carrusel-item img {
+    width: 50%; /* Las imágenes se reducen al 50% del ancho del contenedor */
+    margin: auto; /* Centra la imagen en el contenedor */
+}
+
+/* Para cambiar el color del rectángulo */
+.carrusel-caption {
+    position: absolute;
+    bottom: 20px; /* Ubicación del caption */
+    left: 20px; /* Desplazamiento desde la izquierda */
+    color: #fff; /* Color blanco para el texto del caption */
+    background-color: rgba(250, 54, 156, 0.5); /* Fondo semi-transparente */
+    padding: 10px;
+}
+
+button {
+    position: absolute;
+    top: 50%; /* Centra verticalmente el botón */
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo semi-transparente para los botones */
+    color: white; /* Color blanco para el texto del botón */
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+}
+
+.prev {
+    left: 10px; /* Botón izquierdo */
+}
+
+.next {
+    right: 10px; /* Botón derecho */
+}
+
+.container-quienes-somos {
+    background-color: #b695f9; /* Violeta de tu paleta */
+    color: #fff; /* Texto blanco */
+    text-align: center; /* Centrar el texto */
+    padding: 20px; /* Espaciado alrededor del contenido */
+    margin-top: 20px; /* Espacio sobre el container */
+    border-radius: 8px; /* Bordes redondeados opcionales */
+}
+
+.container-quienes-somos h2 {
+    margin-bottom: 10px; /* Espacio debajo del título */
+    font-size: 2em; /* Tamaño del título */
+    font-weight: 600; /* Peso de la fuente para hacerlo más suave */
+    font-family: 'Arial', sans-serif; /* Fuente suave */
+}
+
+.container-quienes-somos p {
+    font-size: 1.2em; /* Tamaño del texto del párrafo */
+    font-weight: 300; /* Peso de la fuente más ligero */
+    font-family: 'Arial', sans-serif; /* Fuente suave */
+    line-height: 1.5; /* Espaciado entre líneas para mejorar la legibilidad */
+}
+
+.imagenes-pequeñas {
+    margin-top: 20px; /* Espacio superior */
+}
+
+.imagenes-wrapper {
+    display: flex; /* Usar flexbox para alinear las imágenes */
+    justify-content: space-around; /* Espacio entre las imágenes */
+    flex-wrap: wrap; /* Permitir que las imágenes se ajusten en pantallas pequeñas */
+}
+
+.imagen-box {
+    width: 18%; /* Ancho de cada caja de imagen */
+    margin: 10px; /* Espacio alrededor de cada caja */
+}
+
+.imagen-box img {
+    width: 100%; /* La imagen ocupa el 100% del ancho de la caja */
+    border-radius: 5px; /* Bordes redondeados para las imágenes */
+}
+
+
+/* Sección "Nuestro equipo" */
+.container-nuestro-equipo {
+    background-color: #fff; /* Fondo blanco */
+    color: #000; /* Texto negro */
+    text-align: center; /* Centrar texto */
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 8px; /* Bordes redondeados */
+}
+
+.container-nuestro-equipo h2 {
+    margin-bottom: 10px;
+    font-size: 2em;
+    font-weight: 600; /* Peso suave */
+    font-family: 'Arial', sans-serif; /* Fuente suave */
+}
+
+.container-nuestro-equipo p {
+    font-size: 1.2em;
+    font-weight: 300;
+    font-family: 'Arial', sans-serif;
+    line-height: 1.5;
+}
+
+/* Sección "Perfiles del equipo de la Consultora" */
+.container-perfiles {
+    text-align: center; /* Centrar el título */
+    margin-top: 20px;
+}
+
+/* Wrapper para alinear los perfiles en una fila */
+.perfiles-wrapper {
+    display: flex; /* Flexbox para alineación en fila */
+    justify-content: space-around; /* Distribuir espacio entre los boxes */
+    flex-wrap: wrap; /* Permitir que se ajusten en pantallas pequeñas */
+    margin-top: 20px;
+}
+
+/* Estilo de cada perfil */
+.perfil-box {
+    background-color: #fa369c; /* Rosa claro de tu paleta */
+    color: #fff; /* Texto blanco */
+    padding: 20px;
+    margin: 10px;
+    border-radius: 8px;
+    width: 30%; /* Ancho de cada box */
+    box-sizing: border-box;
+}
+
+.perfil-box h4 {
+    font-size: 1.4em;
+    margin-bottom: 10px;
+}
+
+.perfil-box p {
+    font-size: 1em;
+    font-weight: 300;
+    line-height: 1.5;
+}
+
+.container-proyectos {
+    margin-top: 20px; /* Espacio superior */
+    text-align: center; /* Centrar el texto */
+}
+
+.proyecto-box {
+    color: white; /* Texto blanco */
+    padding: 20px; /* Espaciado interno */
+    border-radius: 8px; /* Bordes redondeados */
+    margin: 10px 0; /* Espacio superior e inferior (elimina el margen lateral) */
+    width: 100%; /* Ocupar el 100% del ancho */
+    box-sizing: border-box; /* Incluir padding y border en el ancho total */
+}
+
+.imagenes-proyecto {
+    display: flex; /* Usar flexbox para alinear las imágenes */
+    justify-content: space-around; /* Espacio entre las imágenes */
+    margin-top: 20px; /* Espacio superior entre el título y las imágenes */
+}
+
+.imagen-proyecto {
+    width: 30%; /* Ancho de cada imagen */
+}
+
+.imagen-proyecto img {
+    width: 75%; /* La imagen ocupa el 100% del ancho de la caja */
+    border-radius: 5px; /* Bordes redondeados para las imágenes */
+}
+
+.enlace-proyecto {
+    display: inline-block; /* Mostrar como bloque para padding */
+    margin-top: 15px; /* Espacio superior para el enlace */
+    color: white; /* Color blanco para el enlace */
+    text-decoration: none; /* Sin subrayado */
+    padding: 10px 15px; /* Espaciado interno */
+    background-color: #fa369c; /* Fondo rosa para el botón */
+    border-radius: 5px; /* Bordes redondeados para el botón */
+}
+
+.enlace-proyecto:hover {
+    background-color: #e0308c; /* Color al pasar el mouse */
+}
+
+
+
+/* Estilo para el footer */
+.footer {
+    background-color: black; /* Fondo negro */
+    color: white; /* Texto blanco */
+    text-align: center; /* Centrar el texto */
+    padding: 10px 0; /* Espaciado interno */
+    position: relative; /* Posicionamiento básico */
+    bottom: 0;
+    width: 100%; /* Ocupar todo el ancho de la página */
+}
+
+.footer p {
+    margin: 0; /* Quitar márgenes al párrafo */
+    font-size: 0.9em; /* Tamaño de letra más pequeño */
+}
+
+/* Estilo para el enlace de LinkedIn */
+.linkedin-link {
+    color: white; /* Color blanco para el enlace */
+    text-decoration: none; /* Quitar subrayado */
+    margin-left: 10px; /* Espacio a la izquierda del logo */
+}
+
+/* Estilo para el logo de LinkedIn */
+.linkedin-logo {
+    width: 60px; /* Ajustar el tamaño del logo */
+    height: auto; /* Mantener proporciones */
+    vertical-align: middle; /* Alinear verticalmente con el texto */
+}
