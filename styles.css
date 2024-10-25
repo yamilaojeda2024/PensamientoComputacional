@@ -32,7 +32,6 @@ h1 {
     margin-bottom: 0px; /* Ajusta este valor según lo necesites */
 }
 
-
 /* Estilo general del menú */
 .navbar {
     text-align: center;
@@ -70,10 +69,6 @@ h1 {
 .menu-boxes a:active {
     background-color: rgba(255, 255, 255, 0.8); /* Aumenta la opacidad al hacer clic */
 }
-
-
-
-
 
 .carrusel {
     position: relative;
@@ -173,7 +168,6 @@ button {
     border-radius: 5px; /* Bordes redondeados para las imágenes */
 }
 
-
 /* Sección "Nuestro equipo" */
 .container-nuestro-equipo {
     background-color: #fff; /* Fondo blanco */
@@ -263,48 +257,22 @@ button {
     border-radius: 5px; /* Bordes redondeados para las imágenes */
 }
 
-.enlace-proyecto {
-    display: inline-block; /* Mostrar como bloque para padding */
-    margin-top: 15px; /* Espacio superior para el enlace */
-    color: white; /* Color blanco para el enlace */
-    text-decoration: none; /* Sin subrayado */
-    padding: 10px 15px; /* Espaciado interno */
-    background-color: #fa369c; /* Fondo rosa para el botón */
-    border-radius: 5px; /* Bordes redondeados para el botón */
+.enlace-pro
+footer {
+    text-align: center; /* Centra el contenido del footer */
+    padding: 20px; /* Espaciado interno */
+    background-color: black; /* Fondo del footer en negro */
+    color: white; /* Color del texto en blanco */
 }
 
-.enlace-proyecto:hover {
-    background-color: #e0308c; /* Color al pasar el mouse */
+.footer-text {
+    display: flex; /* Usa flexbox para alinear elementos */
+    justify-content: center; /* Centra el contenido horizontalmente */
+    align-items: center; /* Centra el contenido verticalmente */
 }
 
-
-
-/* Estilo para el footer */
-.footer {
-    background-color: black; /* Fondo negro */
-    color: white; /* Texto blanco */
-    text-align: center; /* Centrar el texto */
-    padding: 10px 0; /* Espaciado interno */
-    position: relative; /* Posicionamiento básico */
-    bottom: 0;
-    width: 100%; /* Ocupar todo el ancho de la página */
-}
-
-.footer p {
-    margin: 0; /* Quitar márgenes al párrafo */
-    font-size: 0.9em; /* Tamaño de letra más pequeño */
-}
-
-/* Estilo para el enlace de LinkedIn */
-.linkedin-link {
-    color: white; /* Color blanco para el enlace */
-    text-decoration: none; /* Quitar subrayado */
+.footer-logo {
+    max-width: 50px; /* Ajusta el tamaño máximo del logo */
+    height: auto; /* Mantiene la proporción */
     margin-left: 10px; /* Espacio a la izquierda del logo */
-}
-
-/* Estilo para el logo de LinkedIn */
-.linkedin-logo {
-    width: 60px; /* Ajustar el tamaño del logo */
-    height: auto; /* Mantener proporciones */
-    vertical-align: middle; /* Alinear verticalmente con el texto */
 }
