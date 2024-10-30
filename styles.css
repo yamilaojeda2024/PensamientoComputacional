@@ -33,9 +33,18 @@ h1 {
 }
 
 /* Estilo general del menú */
+.navbar-container {
+    display: flex; /* Aplica Flexbox al contenedor */
+    justify-content: center; /* Centra el contenido horizontalmente */
+    align-items: center; /* Centra el contenido verticalmente */
+    padding: 10px; /* Espaciado alrededor de la barra de navegación */
+    background-color: #f8f8f8; /* Fondo del contenedor */
+}
+
 .navbar {
     text-align: center;
     margin-bottom: 20px;
+    width: 100%; /* Asegura que la barra de navegación ocupe todo el ancho */
 }
 
 .menu-boxes {
@@ -43,20 +52,23 @@ h1 {
     padding: 0;
     margin: 0;
     display: flex;
+    flex-direction: row; /* Fila en pantallas grandes */
     justify-content: center;
-    gap: 20px;
+    gap: 20px; /* Espacio entre los elementos */
+    flex-wrap: wrap; /* Permite que los elementos se envuelvan */
 }
 
 .menu-boxes li {
     display: flex;
-    flex-grow: 1; /* Permite que cada botón ocupe espacio de manera equitativa */
+    flex-grow: 1; /* Ocupa espacio de manera equitativa */
+    margin: 0 10px; /* Espacio entre los elementos */
 }
 
 .menu-boxes a {
     display: flex;
     justify-content: center; /* Centra el texto dentro del botón */
     align-items: center;
-    padding: 15px 0px;
+    padding: 15px 0;
     width: 100%;
     background-color: rgba(250, 54, 156, 0.2); /* Fondo semi-transparente */
     color: #000;
@@ -67,11 +79,24 @@ h1 {
 }
 
 .menu-boxes a:hover {
-    background-color: rgba(255, 255, 255, 0.5); /* Más opaco al pasar el mouse */
+    background-color: rgba(250, 54, 156, 0.5); /* Cambia el fondo al pasar el mouse */
 }
 
-.menu-boxes a:active {
-    background-color: rgba(255, 255, 255, 0.8); /* Aumenta la opacidad al hacer clic */
+/* Media query para ajustes en dispositivos móviles */
+@media (max-width: 600px) {
+    .menu-boxes {
+        flex-direction: column; /* Cambia a columna en pantallas pequeñas */
+        align-items: center; /* Centra los elementos verticalmente */
+    }
+
+    .menu-boxes li {
+        width: 100%; /* Hace que los elementos ocupen todo el ancho */
+    }
+
+    .menu-boxes a {
+        font-size: 14px; /* Ajusta el tamaño del texto */
+        padding: 10px; /* Ajusta el padding si es necesario */
+    }
 }
 
 .carrusel {
@@ -211,15 +236,34 @@ button {
 }
 
 /* Estilo de cada perfil */
+
 .perfil-box {
     background-color: #fa369c; /* Rosa claro de tu paleta */
     color: #fff; /* Texto blanco */
     padding: 20px;
     margin: 10px;
     border-radius: 8px;
-    width: 30%; /* Ancho de cada box */
-    box-sizing: border-box;
+    width: calc(30% - 20px); /* Ancho de cada box, considerando el margen */
+    box-sizing: border-box; /* Incluye el padding y el margen en el ancho total */
+    display: flex; /* Activa Flexbox en cada caja */
+    flex-direction: column; /* Permite apilar elementos verticalmente */
+    align-items: center; /* Centra los elementos dentro de la caja */
+    justify-content: center; /* Centra los elementos verticalmente */
 }
+
+/* Media query para ajustes en dispositivos móviles */
+@media (max-width: 768px) {
+    .perfil-box {
+        width: calc(45% - 20px); /* Ancho en pantallas medianas */
+    }
+}
+
+@media (max-width: 480px) {
+    .perfil-box {
+        width: 100%; /* Ancho completo en pantallas pequeñas */
+    }
+}
+
 
 .perfil-box h4 {
     font-size: 1.4em;
