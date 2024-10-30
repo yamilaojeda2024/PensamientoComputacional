@@ -48,12 +48,16 @@ h1 {
 }
 
 .menu-boxes li {
-    display: inline-block;
+    display: flex;
+    flex-grow: 1; /* Permite que cada botón ocupe espacio de manera equitativa */
 }
 
 .menu-boxes a {
-    display: block;
-    padding: 15px 30px;
+    display: flex;
+    justify-content: center; /* Centra el texto dentro del botón */
+    align-items: center;
+    padding: 15px 0px;
+    width: 100%;
     background-color: rgba(250, 54, 156, 0.2); /* Fondo semi-transparente */
     color: #000;
     text-decoration: none;
