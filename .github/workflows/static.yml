@@ -30,6 +30,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
+      with:
+      submodules: false
+
         uses: actions/checkout@v4
       - name: Setup Pages
         uses: actions/configure-pages@v5
